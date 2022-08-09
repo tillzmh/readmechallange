@@ -1,4 +1,6 @@
 // TODO: Include packages needed for this application
+const fs = require('fs')
+const inquirer = require ('inquirer')
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -25,6 +27,13 @@ const questions = [
     {type:'input',
     name: 'github',
     message: "what is your github username?",},
+    
+    {type:'list',
+    name: 'license',
+    message: 'select license',
+    choice: ['MIT', 'AOACGE 2.0', 'GPL 3.0', 'BSD 3' ]
+
+}
 
 ];
 

@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs')
 const inquirer = require ('inquirer')
-
+const markdown = required ('./utils/generateMarkdown')
 // TODO: Create an array of questions for user input
 const questions = [
     { type:'input',
@@ -31,14 +31,16 @@ const questions = [
     {type:'list',
     name: 'license',
     message: 'select license',
-    choice: ['MIT', 'AOACGE 2.0', 'GPL 3.0', 'BSD 3' ]
+    choice: ['MIT', 'APACGE 2.0', 'GPL 3.0', 'BSD 3' ]
 
 }
 
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    
+}
 
 // TODO: Create a function to initialize app
 function init() {}

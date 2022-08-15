@@ -29,7 +29,7 @@ const questions = [
     name: 'github',
     message: "what is your github username?",},
     
-    {type:'list',
+    {type:'imput',
     name: 'license',
     message: 'select license',
     choice: ['MIT', 'APACGE 2.0', 'GPL 3.0', 'BSD 3',]},
@@ -37,8 +37,13 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    return fs.writeToFile("Develop/utils/README.md", markdown,data); console.log(fileName)
+function writeToFile (fileName, data) {
+    return fs.writeFile ("./readMe"+fileName,data,
+    function(err) {
+        if (err) return console.log(err);
+        console.log("successfully wrote:" + fileName);
+    });
+
 }
 
 // TODO: Create a function to initialize app
